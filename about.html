@@ -8,20 +8,29 @@
     <title>MDHL</title>
     <link rel="shortcut icon" href="./img/Mighty_ducks_primary_logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <figure>
-            <img src="./assets/img/Logo_Mighty_ducks-01.png" alt="logo" width="150">
-        </figure>
-        <h1>Mighty Ducks Hockey League</h1>
-        <nav><a href="./index.html">Home</a> | About MDHL | <a href="./contact.html">Contact</a></nav>
+        <section>
+            <h1>Mighty Ducks Hockey League</h1>
+            <figure>
+                <img class="banner" src="./assets/img/banner.jpeg" alt="banner">
+            </figure>
+            <nav><a href="./index.html">Home</a><a class="active" href="./about.html">About MDHL</a><a
+                    href="./contact.html">Contact</a></nav>
+            <h2>About</h2>
+        </section>
     </header>
     <main>
-        <figure>
-            <img src="./assets/img/hockey_2.jpg" alt="imagen 2" width="300">
+        <figure class="logo">
+            <img id="logo" src="./assets/img/Logo_Mighty_ducks-01.png" alt="logo" width="150">
         </figure>
+        <section>
+
             <article>
                 <h3>Mision</h3>
                 <p>To support young athletes living Chicago's northside neighborhood, who have an interest in
@@ -41,6 +50,10 @@
                     neighborhood. MDHL ran by o small full-time staff, and relies on the generous volunteer time of
                     parents and previous league members.</p>
             </article>
+        </section>
+        <figure class="promo">
+            <img src="./assets/img/hockey_2.jpg" alt="imagen 2" width="300">
+        </figure>
     </main>
 </body>
 
