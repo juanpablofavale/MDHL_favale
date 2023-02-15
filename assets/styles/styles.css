@@ -39,6 +39,8 @@ header h1{
 header div{
     display: flex;
     position: absolute;
+    flex-wrap: wrap;
+    gap: 20px;
     top: 88px;
     background-color: rgba(0, 0, 0, 0.459);
     width: 100%;
