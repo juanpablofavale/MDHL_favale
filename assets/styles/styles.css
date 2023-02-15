@@ -10,7 +10,7 @@ body{
 
 
 .logo{
-    width: 120px;
+    width: 90px;
 }
 
 header{
@@ -24,7 +24,6 @@ header section{
 
 header h1{
     flex-grow: 1;
-    text-align: center;
     color: #f8e12e;
     color: black;
     font-size: 2rem;
@@ -82,13 +81,64 @@ nav a:hover{
 }
 
 .active{
-    box-shadow: inset 0 0 15px #0000ff;
-    border: 1px solid rgb(0, 0, 255);
+    box-shadow: inset 0 0 15px black;
+    border: 1px solid black;
 }
 
 .active:hover{
-    background-color: #0000ff;
-    color: white;
+    background-color: black;
+    color: #f8e12e;
+}
+
+main{
+    display: flex;
+    align-items: center;
+}
+
+main section, main div{
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.promo{
+    margin: 0 30px;
+}
+
+.promo img{
+    border-radius: 15px;
+}
+
+main h3{
+    font-size: 20px;
+    margin: 7px 0;
+}
+
+main p, main ul, main ol{
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+main li{
+    list-style-position: inside;
+    padding: 5px;
+}
+
+.ginfo{
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px;
+}
+
+.ginfo .observation{
+    padding: 0 10px;
+}
+
+main table{
+    margin-top: 30px;
+}
+
+.ginfo h4{
+    margin-top: 25px;
 }
 
 /* body{
