@@ -37,7 +37,7 @@ header h1{
 header div{
     display: flex;
     position: absolute;
-    top: 128px;
+    top: 88px;
     background-color: rgba(0, 0, 0, 0.459);
     width: 100%;
     padding: 20px;
@@ -92,8 +92,9 @@ nav a:hover{
 
 main{
     display: flex;
-    align-items: center;
 }
+
+
 
 main section, main div{
     flex-grow: 1;
@@ -126,19 +127,44 @@ main li{
 .ginfo{
     flex-direction: column;
     align-items: flex-start;
-    margin: 50px;
 }
 
 .ginfo .observation{
     padding: 0 10px;
+    text-decoration: underline;
 }
 
 main table{
-    margin-top: 30px;
+    margin: 30px;
 }
 
-.ginfo h4{
-    margin-top: 25px;
+.ginfo > h4{
+    font-size: 20px;
+    margin: 7px 0;
+}
+
+td{
+    padding: 5px;
+    border: 2px solid black;
+}
+
+tr:nth-child(even){
+    background-color: #fff8c3;
+}
+
+th{
+    background-color: black;
+    color: #f8e12e;
+    padding: 5px;
+}
+
+.contact{
+    display: flex;
+    width: 100%;
+}
+
+.contact > div{
+    width: 50%;
 }
 
 /* body{
