@@ -5,8 +5,8 @@
 }
 
 body{
-    font-family: 'Comic Neue', cursive;
     box-shadow: inset 0 0 15px blue;
+    font-family: 'Comic Neue', cursive;
     min-height: 100vh;
 }
 
@@ -39,7 +39,6 @@ header h1{
 header div{
     display: flex;
     position: absolute;
-    flex-wrap: wrap;
     gap: 20px;
     top: 88px;
     background-color: rgba(0, 0, 0, 0.459);
@@ -80,7 +79,7 @@ nav a:hover{
     width: 100%;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.418);
     height: 50vh;
-    max-height: 450px;
+    max-height: 350px;
     object-fit: cover;
 }
 
@@ -96,23 +95,26 @@ nav a:hover{
 
 main{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-
 main section, main div{
-    flex-grow: 1;
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
 }
 
-.promo{
-    margin: 0 30px;
+.reg{
+    display: flex;
+    flex-direction: column;
 }
 
+.promo{
+    float: right;
+}
 
 .promo img{
-    margin-top: 10px;
-    margin-right: 10px;
     box-shadow: 0px 0px 20px orange;
     border-radius: 50%;
 }
@@ -122,9 +124,76 @@ main h3{
     margin: 7px 0;
 }
 
-main p, main ul, main ol{
+main p, main ul, main ol, main form{
     font-size: 15px;
     padding-left: 25px;
+}
+
+main form{
+    max-width: 800px;
+    margin: 30px;
+    padding-right: 25px;
+    border: 2px solid orange;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 15px black;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+legend{
+    padding: 5px;
+    font-weight: bolder;
+}
+
+form [type=submit]{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    background-color: #5d4cfd;
+    color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all .3s;
+}
+
+form label{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.opciones{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.opciones label{
+    margin-top: auto;
+}
+
+form [type=submit]:hover{
+    transform: translate(0, -5px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.575);
+}
+
+form [type=submit]:active{
+    transform: translate(0, 0px);
+    box-shadow: none;
+}
+
+form fieldset{
+    margin: 30px 20px;
+    margin-top: 0;
+    padding: 10px;
+    border-color: orangered;
+}
+
+[type=text], [type=date], [type=number]{
+    padding: 10px;
 }
 
 main li{
@@ -134,7 +203,7 @@ main li{
 
 .ginfo{
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .ginfo .observation{
@@ -144,6 +213,9 @@ main li{
 
 main table{
     margin: 30px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
 }
 
 .ginfo > h4{
@@ -168,9 +240,85 @@ th{
 
 .contact{
     display: flex;
-    width: 100%;
+    width: 80%;
 }
 
 .contact > div{
     width: 50%;
+}
+
+.reg h3{
+    font-size: 20px;
+    margin: 7px 0;
+}
+
+@media (max-width:830px){
+    header div{
+        flex-direction: column;
+    }
+    .promo{
+        display: flex;
+        float: none;
+        justify-content: center;
+    }
+    .promo img{
+        width: 250px;
+    }
+    main table{
+        margin: 20px auto;
+    }
+    main form{
+        margin: 10px 2px;
+    }
+}
+
+@media (max-width:620px){
+    header div{
+        background-color: rgba(0, 0, 0, 0);
+        top: 75px;
+    }
+    header h2{
+        background-color: rgba(0, 0, 0, 0.568);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    header ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width:530px){
+    header h1{
+        font-size: 20px;
+    }
+    .contact{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:430px){
+    body{
+        box-shadow: none;
+    }
+    main table{
+        margin: 20px auto;
+    }
+}
+
+@media (max-width:350px){
+    header section{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    main div, main section{
+        padding: 5px;
+    }
+    main table{
+        margin: 20px 0px;
+    }
+    header div{
+        top: 110px;
+    }
 }
